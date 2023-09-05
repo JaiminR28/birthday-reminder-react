@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
 
-const List = () => {
-  return (
-    <>
-      <h2>list component</h2>
-    </>
-  );
+const List = ({ people }) => {
+	console.log(people);
+	return people.map((person) => <h2 key={person.id}>{person.name}</h2>);
 };
 
 export default List;
